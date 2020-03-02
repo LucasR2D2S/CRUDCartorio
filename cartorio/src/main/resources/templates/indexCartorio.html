@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cartorios Docket</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/e2078d852f.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="table-responsive" align="left">
+            <h3 class="display-4">Cartorio encontrado!</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="cartorio: ${cartorio}" data-spy="scroll">
+                        <th><span th:text="${cartorio.getId()}"></span></th>
+                        <th><span th:text="${cartorio.getNome()}"></span></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
